@@ -61,6 +61,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".deployment" />
+    <Content Include="deploy.cmd" />
     <Content Include="requirements.txt" />
     <Content Include="slackstackbot\static\favicon.ico" />
     <Content Include="slackstackbot\templates\about.html" />
