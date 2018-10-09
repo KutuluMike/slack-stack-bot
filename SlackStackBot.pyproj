@@ -73,6 +73,13 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="slackstackbot\blueprints\" />
+    <Folder Include="instance\" />
+    <Folder Include="slackstackbot\" />
+    <Folder Include="slackstackbot\templates\" />
+    <Folder Include="slackstackbot\static\" />
+  </ItemGroup>
+  <ItemGroup>
     <Interpreter Include="env\">
       <Id>env</Id>
       <Version>3.6</Version>
@@ -82,13 +89,6 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="slackstackbot\blueprints\" />
-    <Folder Include="instance\" />
-    <Folder Include="slackstackbot\" />
-    <Folder Include="slackstackbot\templates\" />
-    <Folder Include="slackstackbot\static\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
