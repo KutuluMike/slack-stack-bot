@@ -3,8 +3,8 @@ import os
 class Config(object):
     DEBUG = False
 
-    DOCUMENTDB_DATABASE = "FeedStateDatabase"
-    DOCUMENTDB_COLLECTION = "FeedItemsCollection"    
+    COSMOSDB_DATABASE = "FeedStateDatabase"
+    COSMOSDB_COLLECTION = "FeedItemsCollection"    
 
     API_APP_ID = "A5T3R35KP"
     
