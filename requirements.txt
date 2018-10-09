@@ -1,0 +1,5 @@
+Flask==0.12.2
+oauthlib==2.0.2
+pip==9.0.1
+pydocumentdb==2.2.0
+setuptools==36.0.1

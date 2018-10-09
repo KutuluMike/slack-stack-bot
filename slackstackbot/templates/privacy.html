@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% set active_page = "privacy" -%}
+{% block title %}Privacy Policy{% endblock %}
+{% block content %}
+<h3>Privacy and Terms</h3>
+
+<p>The purpose of this Slack integrated application is to provide users with easy access to publically accessible information on the Stack Exchange network of sites.</p>
+
+<p>The application <em>does not</em> collect, store, or otherwise use any personal or private information, including names and email address, related to any user on Slack.</p>
+
+<p>As part of the installation of this application, SlackStackBot is granted access to inspect a subset of data related to your Slack team and users (the exact list can be 
+    viewed <a href="https://api.slack.com/bot-users#api_usage">here</a>). Regardless of any permissions to do so, SlackStackBot <em>does not</em> inspect, store, or 
+    otherwise access any messages posted to Slack (publically or privately), and does not collect or store information about any users executing commands via the service.</p>
+
+<p>By installing SlackStackBot onto your Slack team, and subscribing to one or more feeds, you acknowledge that you understand that the SlackStackBot service has no
+    control over the content of posts made to the Stack Exchange network, and KutuluWare Software Services has no ownership or rights to said content beyond the scope
+    of the <a href="https://stackoverflow.blog/2009/06/25/attribution-required/">Stack Exchange license</a> (the Creative Commons Share-Alike license with Attribution (CC-BY-SA)).</p>
+
+<p>If you have any questions or comments, please contact us at: slackstackbot@kutulu.org</p>
+{% endblock %}

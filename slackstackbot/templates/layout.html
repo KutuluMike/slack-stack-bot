@@ -1,0 +1,52 @@
+﻿{% from "macros.html" import nav_link with context %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head -%}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% endblock %} - Slack Stack Bot </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {% endblock -%}
+</head>
+
+<body>
+    {% set active_page = active_page|default('home') -%}
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">SlackStackBot</a>
+            </div>
+
+            <div>
+                <ul class="nav navbar-nav">
+                    {{ nav_link('home.render_home', 'Home') }}
+                    {{ nav_link('home.render_about', 'About') }}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {{ nav_link('home.render_privacy', 'Privacy Policy') }}
+                    {{ nav_link('home.render_help', 'Support') }}
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="col-md-6 col-md-offset-2" id="content">{% block content %}{% endblock %}</div>
+    <div class="col-md-12" id="footer">
+        {% block footer -%}
+        <hr />
+        &copy; Copyright 2017 by <a href="http://www.kutulu.org/">Mike Edenfield</a>.
+        {% endblock -%}
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/69666bd65a.js"></script>
+</body>
+</html>

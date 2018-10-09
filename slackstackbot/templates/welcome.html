@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+    <h2>Congratulations!</h2>
+
+    <p>You have sucessfully installed <em>SlackStackBot</em> to your Slack Team, <code>{{ team }}</code>!</p>
+
+    <p>For more information, to manage this app integration, or to set up custom Stack Exchange fees, please visit <a href="{{ url }}">your integration page</a>.</p>
+{% endblock %}
