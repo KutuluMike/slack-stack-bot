@@ -18,6 +18,7 @@
     <RootNamespace>SlackStackBot</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
     <WebBrowserPort>5555</WebBrowserPort>
+    <Environment>PORT=5555</Environment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>

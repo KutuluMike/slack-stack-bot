@@ -64,7 +64,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\.skipPythonDeployment" goto postPython
 
 echo Detected requirements.txt.  Deploying requirements to site-extension python environment
 
-:: 1 Install packages
+:: 2 Install packages
 echo Pip install requirements.
 D:\home\Python364x64\python.exe -m pip install --upgrade -r requirements.txt
 IF !ERRORLEVEL! NEQ 0 goto error
