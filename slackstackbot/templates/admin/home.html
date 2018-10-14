@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% set active_page = "admin/home" -%}
+{% block title %}Administration - Show Feeds{% endblock %}
+{% block content %}
+<p>Feeds Last Processed: {{ state.processed }}</p>
+<div class="container">
+    <div class="row">
+        <div class="col">Feed Id</div>
+        <div class="col">Site Name</div>
+        <div class="col">Feed Name</div>
+        <div class="col">Description</div>
+        <div class="col">RSS Source</div>
+        <div class="col"></div>
+    </div>
+{% for id, feed in state["feeds"].items() %}
+    <div class="row">
+        <div class="col">{{ id }}</div>
+        <div class="col">{{ feed["site"] }}</div>
+        <div class="col">{{ feed["name"] }}</div>
+        <div class="col">{{ feed["description"] }}</div>
+        <div class="col">{{ feed["uri"] }}</div>
+        <div class="col"><a class="action" href="{{ url_for('admin.edit', id=id) }}">Edit</a> </div>
+    </div>
+{% endfor %}
+</div>
+
+<p> <a class="action" href="{{ url_for('admin.create') }}">New</a></p>
+{% endblock %}

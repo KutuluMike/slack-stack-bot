@@ -29,6 +29,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="slackstackbot\blueprints\admin.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="slackstackbot\blueprints\auth.py">
       <SubType>Code</SubType>
     </Compile>
@@ -65,8 +68,13 @@
     <Content Include=".deployment" />
     <Content Include="deploy.cmd" />
     <Content Include="requirements.txt" />
+    <Content Include="slackstackbot\static\bootstrap.css" />
+    <Content Include="slackstackbot\static\bootstrap.min.css" />
     <Content Include="slackstackbot\static\favicon.ico" />
     <Content Include="slackstackbot\templates\about.html" />
+    <Content Include="slackstackbot\templates\admin\editfeed.html" />
+    <Content Include="slackstackbot\templates\admin\createfeed.html" />
+    <Content Include="slackstackbot\templates\admin\home.html" />
     <Content Include="slackstackbot\templates\help.html" />
     <Content Include="slackstackbot\templates\layout.html" />
     <Content Include="slackstackbot\templates\home.html" />
@@ -81,6 +89,7 @@
     <Folder Include="slackstackbot\" />
     <Folder Include="slackstackbot\templates\" />
     <Folder Include="slackstackbot\static\" />
+    <Folder Include="slackstackbot\templates\admin\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
