@@ -70,9 +70,8 @@ class Feeds(object):
         results = []
         for key in self.state["feeds"]:
             feed = self.state["feeds"][key]
-            if feed["owner"] == "public" or feed["owner"] == self.team:
-                subscribed = " *+*" if self.team in feed["teams"] else ""
-                results.append("• `{0}`: {1} ({2}){3}".format(key, feed["name"], feed["description"], subscribed))
+            subscribed = " *+*" if self.team in feed["teams"] else ""
+            results.append("• `{0}`: {1} ({2}){3}".format(key, feed["name"], feed["description"], subscribed))
 
         return jsonify({ "text" : "The following feeds are available:\n{0}\nUse the feed 'key' to subscribe or unsubscribe from a feed.\n(Feeds you currently subscribe to are marked with a *+*)".format("\n".join(results)) })
 
