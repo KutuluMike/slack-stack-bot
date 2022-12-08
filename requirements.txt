@@ -3,7 +3,7 @@ oauthlib==2.1.0
 pip==18.1
 pydocumentdb==2.3.3
 setuptools==40.4.3
-certifi==2018.8.24
+certifi==2022.12.7
 chardet==3.0.4
 Click==7.0
 Flask-Dance==1.1.0
